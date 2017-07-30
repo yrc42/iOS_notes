@@ -52,10 +52,10 @@
 	}
 
 ## Layout
-Automatically make label fit the words inside it: command+ =
-
-self.view.frame.width
-Self.view.frame.height
+Automatically make label fit the words inside it: `command+ =`
+	
+	self.view.frame.width
+	Self.view.frame.height
 
 Nest image views inside a View, creating child parent relationship
 
@@ -65,9 +65,22 @@ a fixed distance from the screen, square will expand from small screen to large 
 keep the square the same size, fixed width and height, always in the centre
 
 
-
-
-
-Info.plist
+## Info.plist
 	Privacy-location when in use 
 	locationwheninuseAthurization
+
+## Cocoapods vs Carthage
+a dependency manager
+
+1. install at terminal
+	`sudo gem install cocoapods`
+2. `pod setup --verbose`
+3. `pod init`
+4. go into podfile and edit it: `pod 'SwiftJSON'`
+5. 
+
+
+
+
+
+

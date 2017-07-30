@@ -1,4 +1,45 @@
+# Sound
+`import AVFoundation`
+
+	class ViewController: UIViewController, AVAudioPlayerDelegate{
+    	
+    	var audioPlayer = AVAudioPlayer()
+
+   		 @IBAction func notePressed(_ sender: UIButton) {
+	       //sender's tag is set in attribute view
+	        var selectedSoundFile : String = array[sender.tag-1]
+	        //where the sound us located
+	        let url = Bundle.main.url(forResource: selectedSoundFileName, withExtension: "wav")!
+	        do{
+	            audioPlayer = try AVAudioPlayer(contentsOf:url)
+	        }
+	        catch{
+	            print(error)
+	        }
+	        audioPlayer.play()
+	     }
+	}
+
+
+# Alert
+
+## Action Sheet
+bottom of the screen
+## modal alert
+a popup in the middle of the screen with number of actions to choose from
+`import UIAlertController`
+
+	let alert = UIAlertController(title: "finished", message:"would you like to start over?", preferredStyle:.alert)
+	let restartAction = UIAlertAction(title:"restart", style: .default, handler:{
+		(UIAlertAction) in self.startOver()
+	})
+	alert.addAction(restartAction)
+	present(alert, animated: true, completion:nil)
+
+
+
 # Location
+`import CoreLocation`
 
 WeatherViewController handles information sent from CoreLocation, something written by Apple.
 
@@ -21,7 +62,7 @@ WeatherViewController handles information sent from CoreLocation, something writ
     }
 
 
-#Photo library
+# Photo library
 
 * add bar button item and change system item= camera in attribute inspector
 * image view: to display to image chosen
