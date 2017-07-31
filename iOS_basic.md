@@ -9,6 +9,8 @@
 	var des: String?
 	print(des!)
 	Print("pi is \(pi)")
+### Conversion
+	let str = String(aNumber)
 
 ## switch case
 	Switch ingrediant{
@@ -16,6 +18,8 @@
 		Print()
 	Case "bean":
 		Print()
+	default:
+		print()
 	}
 
 ## set image view
@@ -26,23 +30,70 @@
 	randomStr.insert("A", at: randomStr.index(randomStr.startIndex, offset: 2))
 
 ## arrays
+	let emptyArray = [String]()
 
 ## Dictionary
 
 	Var dict1 = [Int : String]()
 	Var dict2 : [Int : String] = [1:"",2:""]
+	for (key, item) in dict1 {
+	
+	}
 
 ## Enum	
-	Enum carType{
+	enum carType{
 		case a
 		case b
 	}
-
-
-## class
-
 	Var typeofcar :CarType = .a
 	
+	enum ServerResponse {
+		case result(String),
+		case failure(String)
+	}
+## Functions
+	func greeting(person: String)-> String {
+	
+	}
+	greeting(person:"Dave")  
+		
+### return tuple
+	fuc calc (scores : [Int]) -> (min:Int, max: Int) {
+		return (min, max)
+	}	
+### return fucntion
+	func increment() -> ( (int) -> int ) {
+		func addOne (num:Int) - > Int {
+			return num+1
+		}
+		return addOne
+	}
+	var incre = increment()
+	incre(10)
+### takes in function
+	func hasMatches(list: [Int], condition:(Int) ->Bool)) -> Bool {
+		
+	}
+	func greaterThanFour(){
+	
+	}
+	hasMatches(list: [1,2,3,4], condition: greaterThanFour)
+	
+#### map
+	let mappedNumber = nums.map({num in 3*num})
+#### sort
+	let sortedNumber = nums.sorted { $0 < $1 }
+### loops
+	for i in 0..<4 {
+		//i will be 0,1,2,3
+	}
+	for i in 0...4 {
+		//i will be 0,1,2,3,4
+	}
+## class
+
+	
+class and parent class name:
 	
 	Class ViewController: UIViewController{
 		override function viewDIdLoad{
