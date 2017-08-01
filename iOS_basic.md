@@ -9,10 +9,15 @@
 	var des: String?
 	print(des!)
 	Print("pi is \(pi)")
+	
+### Optional Binding
+if let constName = optionalName {
+
+}
 ### Conversion
 	let str = String(aNumber)
 
-## switch case
+## switch case: no fall through
 	Switch ingrediant{
 	Case "tomato":
 		Print()
@@ -22,15 +27,35 @@
 		print()
 	}
 
-## set image view
-	imageView.image = UIImage(named :"")
 
 ## string
+### startIndex & endIndex & offsetBy
 	randomStr.insert("A", at: randomStr.startIndex)
-	randomStr.insert("A", at: randomStr.index(randomStr.startIndex, offset: 2))
+	randomStr.insert("A", at: randomStr.index(randomStr.startIndex, offsetBy: 2))
+### index: of
+	let greeting = "Hello, World"
+	var index = greeting.index(of : ",") ?? greeting.endIndex
+	let begining = greeting[..<index]
+	let helloString = String(begining)
+### hasPrefix & hasSuffix
+	if string.hasPrefix("hel")
+
 
 ## arrays
 	let emptyArray = [String]()
+	var list :[String] = ["A", "B"]
+	var threeInts = Array(repeating : 0, count:3)
+`count`,`isEmpty`, `append`, `insert("a", at:3)`
+	
+	for item in list{}
+	for (item, value) in list.enumerated(){}
+	
+## Set
+
+	var favouriteGenres: Set<String> = ["rock", "pop"]
+	`count`,`isEmpty`, `append`,`contain`, `sorted`
+	oddDigits.union(evenDigit)
+	`isSubset`,`isDisjoint`
 
 ## Dictionary
 
@@ -38,6 +63,11 @@
 	Var dict2 : [Int : String] = [1:"",2:""]
 	for (key, item) in dict1 {
 	
+	}
+	if let airportName = airports["YYZ"] {
+		print(airportName)
+	}else{
+		print("such airport not in the dict"
 	}
 
 ## Enum	
@@ -57,6 +87,9 @@
 	}
 	greeting(person:"Dave")  
 		
+### inout parameter: values changed inside the function
+	func swap (a : inout Int, b: inout Int)
+	swap(a:&someInt, b: &otherInt)
 ### return tuple
 	fuc calc (scores : [Int]) -> (min:Int, max: Int) {
 		return (min, max)
@@ -102,6 +135,17 @@ class and parent class name:
 		}
 	}
 
+## Error Handling
+
+	do {
+		try canThrowError()
+		
+	} catch {
+	
+	}
+
+## set image view
+	imageView.image = UIImage(named :"")
 ## Layout
 Automatically make label fit the words inside it: `command+ =`
 	
