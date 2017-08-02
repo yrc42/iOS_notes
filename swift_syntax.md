@@ -86,6 +86,7 @@ if let constName = optionalName {
 	
 	}
 	greeting(person:"Dave")  
+** add `mutating` in front of `func` if function will change the class that it is inside of.**
 		
 ### inout parameter: values changed inside the function
 	func swap (a : inout Int, b: inout Int)
@@ -103,6 +104,7 @@ if let constName = optionalName {
 	}
 	var incre = increment()
 	incre(10)
+	
 ### takes in function
 	func hasMatches(list: [Int], condition:(Int) ->Bool)) -> Bool {
 		
@@ -123,6 +125,9 @@ if let constName = optionalName {
 	for i in 0...4 {
 		//i will be 0,1,2,3,4
 	}
+	
+## Generic Functions
+
 ## class
 
 	
@@ -143,21 +148,6 @@ class and parent class name:
 	} catch {
 	
 	}
-
-## set image view
-	imageView.image = UIImage(named :"")
-## Layout
-Automatically make label fit the words inside it: `command+ =`
-	
-	self.view.frame.width
-	Self.view.frame.height
-
-Nest image views inside a View, creating child parent relationship
-
-### Pining
-a fixed distance from the screen, square will expand from small screen to large screen
-### Alignment
-keep the square the same size, fixed width and height, always in the centre
 
 
 ## Info.plist
