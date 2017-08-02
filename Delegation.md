@@ -1,4 +1,5 @@
 # Delegation
+A design pattern
 
 Between View Controllers: pass information from one view controller to the next, create a instance of that second controller.   
 Say if we need to send information from class A to class B: we can create B1 an instance of B, B1 is now stacked upon the other ViewController, and the ViewControllers can be dissmissed.
@@ -107,7 +108,7 @@ In other words ChangeCity sends info and WeatherView handles it.
 ## Sending information back and forth
 If we just use segue for both view controller, we are creating many new view controller objects A->B1->A1->B2. Thus, to truly send data back(second VC to first) we need to use protocals.
 
-1. create protocol in second view controller
+1. create **protocol** in second view controller
 
 		protocal CanReceive{
 			func dataReceived(data: String)
@@ -141,6 +142,8 @@ If we just use segue for both view controller, we are creating many new view con
 			dismiss(animated:true, completion:nil)
 		}
 
+### Protocol
+A protocol defines the blueprints of methods, properties, and can be adopted by a class to provide the actual implementation. It requires a property with name and type and weather it is setable or gettable 
 	
 Completion handler
 navigation controller: back button, swipe right
