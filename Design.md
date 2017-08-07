@@ -8,9 +8,6 @@
 3. In response, the system creates an application object. The application object is responsible for managing the life cycle of the app. The system also creates an instance of your AppDelegate class, and assigns it to the application object. Finally, the system launches your app.
 4. The AppDelegate class adopts the UIApplicationDelegate protocol. This protocol defines a number of methods you use to set up your app, to respond to the app’s state changes, and to handle other app-level events.
 
-
-## set image view
-	imageView.image = UIImage(named :"")
 ## Layout
 We often work with `Attributes Inspector`
 
@@ -38,3 +35,16 @@ keep the square the same size, fixed width and height, always in the centre
 
 ## Connecting UI and Source Code
 
+`@IBOutlet weak var nameTextField: UITextField!`
+
+`@IBAction func setDefaultLabelText(_ sender: UIButton) {
+}`
+
+### process user input
+The delegating object—in this case, the text field—keeps a reference to the other object—the delegate—and at the appropriate time, the delegating object sends a message to the delegate. The message tells the delegate about an event that the delegating object is about to handle or has just handled. The delegate may respond by for example, updating the appearance or state of itself or of other objects in the app, or returning a value that affects how an impending event is handled.
+
+A text field’s delegate communicates with the text field while the user is editing the text, and knows when important events occur—such as when a user starts or stops editing text. The delegate can use this information to save or clear data at the right time, dismiss the keyboard, and so on.
+
+Any object can serve as a delegate for another object as long as it conforms to the appropriate protocol. It is very common to make a view controller the delegate for objects that it manages. In this case, you’ll make your ViewController instance the text field’s delegate.
+
+First, ViewController needs to adopt the UITextFieldDelegate protocol. You adopt a protocol by listing it as part of the class declaration line.
