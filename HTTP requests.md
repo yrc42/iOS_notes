@@ -16,10 +16,3 @@
             
         }
 
-
-request(url, type of request, parameters) <------------> response(html,css)
- 
- * GET
- * POST
- * DELETE
- 

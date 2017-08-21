@@ -41,10 +41,10 @@ keep the square the same size, fixed width and height, always in the centre
 }`
 
 ### process user input
-The delegating object—in this case, the text field—keeps a reference to the other object—the delegate—and at the appropriate time, the delegating object sends a message to the delegate. The message tells the delegate about an event that the delegating object is about to handle or has just handled. The delegate may respond by for example, updating the appearance or state of itself or of other objects in the app, or returning a value that affects how an impending event is handled.
+#### The delegating object
+* text field
+* keeps a reference to the other object—the delegate—and at the appropriate time, sends a message to the delegate. The message tells the delegate about an event that the delegating object is about to handle or has just handled. The delegate may respond by for example, updating the appearance or state of itself or of other objects in the app, or returning a value that affects how an impending event is handled.**A text field’s delegate communicates with the text field while the user is editing the text**
 
-A text field’s delegate communicates with the text field while the user is editing the text, and knows when important events occur—such as when a user starts or stops editing text. The delegate can use this information to save or clear data at the right time, dismiss the keyboard, and so on.
-
-Any object can serve as a delegate for another object as long as it conforms to the appropriate protocol. It is very common to make a view controller the delegate for objects that it manages. In this case, you’ll make your ViewController instance the text field’s delegate.
-
-First, ViewController needs to adopt the UITextFieldDelegate protocol. You adopt a protocol by listing it as part of the class declaration line.
+#### The delegate
+* Any object can serve as a delegate for another object as long as it conforms to the appropriate protocol. It is very common to make a view controller the delegate for objects that it manages.  **ViewController instance the text field’s delegate**.
+* ViewController needs to adopt the UITextFieldDelegate protocol. You adopt a protocol by listing it as part of the class declaration line.
